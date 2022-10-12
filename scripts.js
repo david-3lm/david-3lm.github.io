@@ -1,5 +1,5 @@
 var i = 0;
-var txt = 'Hola buenos dias, bienvenido a mi CV...';
+var txt = 'Welcome to my CV in development...';
 var speed = 50;
 
 const scrollElements = document.querySelectorAll(".js-scroll");
