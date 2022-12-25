@@ -89,22 +89,22 @@ html{
 }
 
 
-button, button::after {
-    width: 380px;
-    height: 86px;
-    font-size: 36px;
+#bot, #bot::after {
+    width: 200px;
+    height: 70px;
+    font-size: 12px;
     font-family: 'Bebas Neue', cursive;
-    background: linear-gradient(45deg, transparent 5%, #184ABE 5%);
+    background: linear-gradient(45deg, transparent 5%, #848892 5%);
     border: 0;
     color: #fff;
     letter-spacing: 3px;
-    line-height: 88px;
+    line-height: 35px;
     box-shadow: 6px 0px 0px #04B0B0;
     outline: transparent;
     position: relative;
   }
   
-  button::after {
+  #bot::after {
     --slice-0: inset(50% 50% 50% 50%);
     --slice-1: inset(80% -6px 0 0);
     --slice-2: inset(50% -6px 30% 0);
@@ -112,20 +112,20 @@ button, button::after {
     --slice-4: inset(40% -6px 43% 0);
     --slice-5: inset(80% -6px 5% 0);
     
-    content: 'START THE JOURNEY';
+    content: 'GET STARTED';
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, transparent 3%, #04B0B0 3%, #04B0B0 5%, #184ABE 5%);
+    background: linear-gradient(45deg, transparent 3%, #04B0B0 3%, #04B0B0 5%, #848892 5%);
     text-shadow: -3px -3px 0px #421AC2, 3px 3px 0px #04B0B0;
     clip-path: var(--slice-0);
   }
   
 
-  button:hover::after {
+  #bot:hover::after {
     animation: 1s glitch;
     animation-timing-function: steps(2, end);
   }
@@ -11613,8 +11613,8 @@ button, button::after {
   #mainNav .navbar-toggler {
     font-size: 80%;
     padding: 0.75rem;
-    color: #64a19d;
-    border: 1px solid #64a19d;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
   }
   #mainNav .navbar-toggler:focus {
     outline: none;
@@ -11668,15 +11668,15 @@ button, button::after {
       border-bottom: 0.25rem solid transparent;
     }
     #mainNav.navbar-shrink .nav-link:hover {
-      color: #64a19d;
+      color: #0d6efd;
     }
     #mainNav.navbar-shrink .nav-link:active {
       color: #467370;
     }
     #mainNav.navbar-shrink .nav-link.active {
-      color: #64a19d;
+      color: #0d6efd;
       outline: none;
-      border-bottom: 0.25rem solid #64a19d;
+      border-bottom: 0.25rem solid #0d6efd;
     }
   }
 
@@ -11745,6 +11745,41 @@ button, button::after {
   .about-section p {
     margin-bottom: 5rem;
   }
+
+
+  .studies-section {
+    padding: 10rem 0;
+    background: linear-gradient(to top, #fff 0%, rgba(0, 0, 0, 0.8) 100%);
+  }
+  .studies-section .featured-text {
+    padding: 2rem;
+  }
+  .studies-section h2{
+    font-size: 2.5rem;
+  }
+  @media (min-width: 992px) {
+    .studies-section .featured-text {
+      padding: 0 0 0 0rem;
+      border-left: 0.5rem solid #0d6efd;
+      border-right: 0.5rem solid #0d6efd;
+    }
+  }
+  .studies-section .studies-text {
+    padding: 3rem;
+    font-size: 90%;
+  }
+  @media (min-width: 992px) {
+    .studies-section .studies-text {
+      padding: 5rem;
+    }
+    .studies-section .studies-text hr {
+      border-color: #0d6efd;
+      border-width: 0.25rem;
+      width: 70%;
+    }
+    
+  }
+
 
   .projects-section {
     padding: 10rem 0;
