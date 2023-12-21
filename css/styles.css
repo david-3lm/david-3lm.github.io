@@ -88,23 +88,52 @@ html{
 
 }
 
+#bot2, #bot2::after {
+  width: 200px;
+  height: 70px;
+  font-size: 12px;
+  font-family: 'Bebas Neue', cursive;
+  background: linear-gradient(45deg, transparent 5%, var(--bs-blue) 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 35px;
+  box-shadow: 6px 0px 0px var(--bs-blue);
+  outline: transparent;
+  position: relative;
+}
+
+#bot3, #bot3::after {
+  width: 200px;
+  height: 70px;
+  font-size: 12px;
+  font-family: 'Bebas Neue', cursive;
+  background: linear-gradient(45deg, transparent 5%, var(--bs-orange) 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 35px;
+  box-shadow: 6px 0px 0px var(--bs-orange);
+  outline: transparent;
+  position: relative;
+}
 
 #bot, #bot::after {
     width: 200px;
     height: 70px;
     font-size: 12px;
     font-family: 'Bebas Neue', cursive;
-    background: linear-gradient(45deg, transparent 5%, #848892 5%);
+    background: linear-gradient(45deg, transparent 5%, var(--bs-cyan) 5%);
     border: 0;
     color: #fff;
     letter-spacing: 3px;
     line-height: 35px;
-    box-shadow: 6px 0px 0px #04B0B0;
+    box-shadow: 6px 0px 0px var(--bs-cyan);
     outline: transparent;
     position: relative;
   }
   
-  #bot::after {
+  #bot::after, #bot2::after, #bot3::after {
     --slice-0: inset(50% 50% 50% 50%);
     --slice-1: inset(80% -6px 0 0);
     --slice-2: inset(50% -6px 30% 0);
@@ -125,7 +154,7 @@ html{
   }
   
 
-  #bot:hover::after {
+  #bot:hover::after , #bot2:hover::after, #bot3:hover::after{
     animation: 1s glitch;
     animation-timing-function: steps(2, end);
   }
