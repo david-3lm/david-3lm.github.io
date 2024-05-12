@@ -1,5 +1,18 @@
 {
+  "name": "david-3lm.github.io",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "terser": "^5.30.4",
+    "vite": "^5.2.0"
+  },
   "dependencies": {
-    "aos": "^2.3.4"
+    "kaboom": "^3000.1.17"
   }
 }
