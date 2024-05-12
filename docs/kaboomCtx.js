@@ -1,7 +1,9 @@
 import kaboom from "kaboom";
 
-export const k = kaboom({
-	global: false,
-	touchToMouse: true,
-	canvas: document.getElementById("game"),
-})
+const k = kaboom({
+    global: false,
+    touchToMouse: true,
+    canvas: document.getElementById("game"),
+});
+
+export default k;

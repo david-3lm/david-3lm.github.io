@@ -1,5 +1,5 @@
 import { dialogueData, scaleFactor } from "./constants.js";
-import { k } from "./kaboomCtx.js";
+import k from "./kaboomCtx.js";
 import { displayDialogue, setCamScale } from "./utils.js";
 
 k.loadSprite("spritesheet", "./colored_packed.png",{
