@@ -47,6 +47,9 @@ k.scene("main", async () => {
 		"player",
 	]);
 
+	player.isInDialogue = true;
+	displayDialogue(dialogueData["Start"], () => (player.isInDialogue = false));
+
 	for (const layer of layers)
 	{
 		if (layer.name === "boundaries")
