@@ -48,7 +48,7 @@ k.scene("main", async () => {
 	]);
 
 	player.isInDialogue = true;
-	displayDialogue(dialogueData["en"]["Start"], () => (player.isInDialogue = false));
+	displayDialogue(dialogueData["es"]["Start"], () => (player.isInDialogue = false));
 
 	for (const layer of layers)
 	{
@@ -69,7 +69,7 @@ k.scene("main", async () => {
 				{
 					player.onCollide(boundary.name, () => {
 						player.isInDialogue = true;
-						displayDialogue(dialogueData["en"][boundary.name], () => (player.isInDialogue = false));
+						displayDialogue(dialogueData["es"][boundary.name], () => (player.isInDialogue = false));
 					})
 				}
 			}
