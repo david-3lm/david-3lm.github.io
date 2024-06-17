@@ -21,6 +21,23 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
+			
+			function changeLanguage(lang) {
+	            localStorage.setItem('preferredLanguage', lang);
+	            updateLanguageDisplay(lang);
+	        }
+
+	        function updateLanguageDisplay(lang) {
+	            var elements = document.querySelectorAll('[data-lang]');
+	            elements.forEach(function(element) {
+	                element.style.display = element.getAttribute('data-lang') === lang ? 'block' : 'none';
+	            });
+	        }
+
+	        document.addEventListener('DOMContentLoaded', function() {
+	            var preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+	            updateLanguageDisplay(preferredLanguage);
+	        });
         </script>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">

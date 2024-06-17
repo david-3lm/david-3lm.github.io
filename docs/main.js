@@ -47,8 +47,10 @@ k.scene("main", async () => {
 		"player",
 	]);
 
+	const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+
 	player.isInDialogue = true;
-	displayDialogue(dialogueData["Start"], () => (player.isInDialogue = false));
+	displayDialogue(dialogueData[preferredLanguage]["Start"], () => (player.isInDialogue = false));
 
 	for (const layer of layers)
 	{
@@ -69,7 +71,7 @@ k.scene("main", async () => {
 				{
 					player.onCollide(boundary.name, () => {
 						player.isInDialogue = true;
-						displayDialogue(dialogueData[boundary.name], () => (player.isInDialogue = false));
+						displayDialogue(dialogueData[preferredLanguage][boundary.name], () => (player.isInDialogue = false));
 					})
 				}
 			}

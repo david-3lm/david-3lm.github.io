@@ -15,27 +15,66 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        
+        <script>
+            function changeLanguage(lang) {
+                var elements = document.querySelectorAll('[data-lang]');
+                elements.forEach(function(element) {
+                    element.style.display = element.getAttribute('data-lang') === lang ? 'block' : 'none';
+                });
+            }
+
+			function updateLanguageDisplay(lang) {
+                var elements = document.querySelectorAll('[data-lang]');
+                elements.forEach(function(element) {
+                    element.style.display = element.getAttribute('data-lang') === lang ? 'block' : 'none';
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+                updateLanguageDisplay(preferredLanguage);
+            });
+        </script>
     </head>
     <body id="page-top">
-        <!-- Masthead-->
+         <!-- Masthead-->
         <header class="masthead">
-            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+			<div class="container  d-flex align-items-center justify-content-center">
+				<button class="btn btn-secondary btn-lg mx-4 mt-3" onclick="changeLanguage('en')" >English</button>
+				<button class="btn btn-secondary btn-lg mx-4 mt-3" onclick="changeLanguage('es')" >Español</button>
+			</div>
+			<div class="container px-4 px-lg-5 d-flex h-75 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
-                        <h1 class="mx-auto my-0 text-uppercase">Welcome</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">This is David López López's website, enjoy your stay! <br>
-							You can choose to know me better by <b>playing my portfolio game</b> or <b>by reading my website!</b>
-						</h2>
-                        <!-- buttons here-->
-                        <div class="text-center mt-3">
-                            <a class="btn btn-primary btn-lg mx-5 mt-3" href="./game.html" id="bot2">Play It!</a>
-                            <a class="btn btn-primary btn-lg mx-5 mt-3" href="./web.html" id="bot3">Web version</a>
+                        <!-- English Content -->
+                        <div data-lang="en">
+                            <h1 class="mx-auto my-0 text-uppercase">Welcome</h1>
+                            <h2 class="text-white-50 mx-auto mt-2 mb-5">
+                                This is David López López's website, enjoy your stay! <br>
+                                You can choose to know me better by <b>playing my portfolio game</b> or <b>by reading my website!</b>
+                            </h2>
+                            <div class="text-center mt-3">
+                                <a class="btn btn-primary btn-lg mx-5 mt-3" href="./game.html" id="bot2">Play It!</a>
+                                <a class="btn btn-primary btn-lg mx-5 mt-3" href="./web.html" id="bot3">Web version</a>
+                            </div>
                         </div>
-                        <!-- -->
+                        
+                        <!-- Spanish Content -->
+                        <div data-lang="es" style="display: none;">
+                            <h1 class="mx-auto my-0 text-uppercase">Bienvenido</h1>
+                            <h2 class="text-white-50 mx-auto mt-2 mb-5">
+                                Este es el sitio web de David López López, ¡disfruta tu estadía! <br>
+                                Puedes elegir conocerme mejor <b>jugando mi juego de portafolio</b> o <b>leyendo mi sitio web!</b>
+                            </h2>
+                            <div class="text-center mt-3">
+                                <a class="btn btn-primary btn-lg mx-5 mt-3" href="./game.html" id="bot2">¡Jugar!</a>
+                                <a class="btn btn-primary btn-lg mx-5 mt-3" href="./web.html" id="bot3">Versión web</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
-	</body>
+    </body>
 </html>
+
