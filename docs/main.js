@@ -48,6 +48,7 @@ k.scene("main", async () => {
 	]);
 
 	const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+	console.log(`Preferred language: ${preferredLanguage}`);
 
 	player.isInDialogue = true;
 	displayDialogue(dialogueData[preferredLanguage]["Start"], () => (player.isInDialogue = false));
